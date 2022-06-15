@@ -1,5 +1,5 @@
 let hikki = require("hikki-me")
-let handler = async (m, { text }) => {
+let handler = async (m, { conn, text }) => {
 try {
 id = text.split('|')[0]
 jumlah = text.split('|')[1]
