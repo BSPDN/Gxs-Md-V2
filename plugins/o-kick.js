@@ -1,4 +1,4 @@
-import { areJidsSameUser } from '@adiwajshing/baileys'
+let { areJidsSameUser } = require('@adiwajshing/baileys')
 let handler = async (m, { participants }) => {
     let users = m.mentionedJid.filter(u => !areJidsSameUser(u, conn.user.id))
     let kickedUser = []
@@ -16,6 +16,8 @@ handler.tags = ['owner']
 handler.command = /^(okick|o-)$/i
 
 handler.owner = true
+handler.group = true
+handler.botAdmin = true
 
 module.exports = handler
 
