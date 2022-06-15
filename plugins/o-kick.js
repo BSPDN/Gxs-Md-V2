@@ -16,8 +16,6 @@ handler.tags = ['owner']
 handler.command = /^(okick|o-)$/i
 
 handler.owner = true
-handler.group = true
-handler.botAdmin = true
 
 module.exports = handler
 
