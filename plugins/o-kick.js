@@ -1,5 +1,5 @@
 let { areJidsSameUser } = require('@adiwajshing/baileys')
-let handler = async (m, { participants }) => {
+let handler = async (m, { conn, participants }) => {
     let users = m.mentionedJid.filter(u => !areJidsSameUser(u, conn.user.id))
     let kickedUser = []
     for (let user of users)
