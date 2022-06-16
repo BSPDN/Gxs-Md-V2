@@ -1,5 +1,6 @@
 let hikki = require("hikki-me")
-let handler = async (m, { conn, args, split }) => {
+let fetch = require("node-fetch")
+let handler = async (m, { conn, args }) => {
 const text = args.join(' ')
 if (!text) return m.reply(`Example .topupff id|jumlah\nList Diamond Yang Di Dukung\nNominal Diamond\n5 Dm\n12 Dm\n70 Dm\n140 Dm\n355 Dm\n720 Dm`)
 try {
