@@ -1,11 +1,11 @@
-let hikki = require("hikki-me")
-let fetch = require("node-fetch")
+let hikki = require('hikki-me')
+let fetch = require('node-fetch')
 let handler = async (m, { conn, args }) => {
 const text = args.join(' ')
 if (!text) return m.reply(`Example .topupff id|jumlah\nList Diamond Yang Di Dukung\nNominal Diamond\n5 Dm\n12 Dm\n70 Dm\n140 Dm\n355 Dm\n720 Dm`)
 try {
-id = text.split('|')[0]
-jumlah = text.split('|')[1]
+id = text.split('|')
+jumlah = text.join('|')
 ff = await hikki.game.nickNameFreefire(id) 
 const topup = async function topupFreeFire() {
 const makeSession = await hikki.game.topupFreeFire(id, jumlah) 
