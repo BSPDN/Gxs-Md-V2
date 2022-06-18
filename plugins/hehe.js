@@ -4,8 +4,8 @@ let handler = async (m, { conn, args }) => {
 const text = args.join(' ')
 if (!text) return m.reply(`Example .topupff id|jumlah\nList Diamond Yang Di Dukung\nNominal Diamond\n5 Dm\n12 Dm\n70 Dm\n140 Dm\n355 Dm\n720 Dm`)
 try {
-let id = text.split('|')
-let jumlah = text.join('|')
+let id = text.split('|')[0]
+let jumlah = text.split('|')[1]
 let ff = await hikki.game.nickNameFreefire(id) 
 const topup = async function topupFreeFire() {
 const makeSession = await hikki.game.topupFreeFire(id, jumlah) 
