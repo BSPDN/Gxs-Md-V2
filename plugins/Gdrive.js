@@ -12,8 +12,8 @@ let handler = async (m, { conn, args }) => {
 		conn.sendMessage(m.chat, { document: { url: res.downloadUrl }, fileName: res.fileName, mimetype: res.mimetype }, { quoted: m })
 	})
 }
-handler.command = /^(gdrive)$/i
-export default handler
+handler.command = ['gdrive']
+module.exports = handler
 
 async function GDriveDl(url) {
 	let id
