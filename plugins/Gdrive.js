@@ -13,6 +13,7 @@ let handler = async (m, { conn, args }) => {
 	})
 }
 handler.command = ['gdrive']
+
 module.exports = handler
 
 async function GDriveDl(url) {
